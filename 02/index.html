@@ -52,6 +52,24 @@
 			overflow: hidden;
 		}
 	</style>
+	<style>
+		.parent{
+			display: table;
+			width: 100%;
+			/*table-layout: fixed;*/
+		}
+		.left3{
+			width: 400px;
+			height: 500px;
+			background-color: brown;
+			display: table-cell;
+		}
+		.right3{
+			height: 500px;
+			background-color: olivedrab;
+			display: table-cell;
+		}
+	</style>
 </head>
 <body>
 <h1>两列布局 </h1>
@@ -81,8 +99,8 @@
 
 <div class="box">
 	<h3>第三种</h3>
-	<p>优点：简单</p>
-	<p>缺点：无法溢出</p>
+	<p>优点：兼容性好</p>
+	<p>缺点：设置为了table,受到了制约</p>
 	<div class="content">
 		<div class="parent">
 			<div class="left3">300</div>
