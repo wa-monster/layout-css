@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>两列布局</title>
+	<style>
+		.box{
+			width: 1000px;
+			overflow: hidden;
+		}
+		.content{
+			width: 1000px;
+			overflow: auto;
+			background-color: gray;
+		}
+	</style>
+	<style>
+		.left1{
+			width: 200px;
+			height: 500px;
+			background-color: brown;
+			float: left;
+		}
+		.right1{
+			height: 500px;
+			background-color: olivedrab;
+			margin-left: 200px;
+		}
+		.inner{
+			width: 100px;
+			height: 100px;
+			background-color: aqua;
+			clear: both;
+		}
+	</style>
+	<style>
+		.left2{
+			width: 200px;
+			height: 500px;
+			background-color: brown;
+			float: left;
+			position: relative;
+			z-index: 10;
+		}
+		.right-fix{
+			float: right;
+			margin-left: -200px;
+		}
+		.right2{
+			height: 500px;
+			background-color: olivedrab;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+<h1>两列布局 </h1>
+<div class="box">
+	<h3>float + margin</h3>
+	<p>优点：简单</p>
+	<p>缺点：自适应列margin的宽度需要和定宽宽度一致，老版本中有兼容性问题,清除浮动出问题</p>
+	<div class="content">
+		<div class="left1">300</div>
+		<div class="right1">
+			<div class="inner"></div>
+		</div>
+	</div>
+</div>
+<div class="box">
+	<h3>float + overflow</h3>
+	<p>解说：开启bfc实现 宽度问题</p>
+	<p>优点：简单</p>
+	<p>缺点：无法溢出</p>
+	<div class="content">
+		<div class="left2">300</div>
+		<div class="right2">
+			<div class="inner"></div>
+		</div>
+	</div>
+</div>
+
+<div class="box">
+	<h3>第三种</h3>
+	<p>优点：简单</p>
+	<p>缺点：无法溢出</p>
+	<div class="content">
+		<div class="parent">
+			<div class="left3">300</div>
+			<div class="right3">
+				<div class="inner"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

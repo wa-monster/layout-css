@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		html,body{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.pWidth{
+			width: 1000px;
+		}
+		.pHeight{
+			height: 500px;
+		}
+		.Width{
+			width:200px;
+		}
+		.Height{
+			height: 200px;
+		}
+		.gray{
+			background-color: gray;
+		}
+		.brown{
+			background-color: brown;
+		}
+	</style>
+	<style>
+		.p1{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.c1{
+			display: table;
+			margin: 0 auto;
+		}
+	</style>
+	<style>
+		.p2{
+			position: relative;
+		}
+		.c2{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	</style>
+	<style>
+		.p3{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.c3{
+		}
+	</style>
+</head>
+<body>
+<h1>水平垂直居中布局</h1>
+<div class="pWidth ">
+	<h3>(table|block) + margin 和 table-cell + vertical-align</h3>
+	<p>优点：兼容性</p>
+	<p>缺点：父级做了修改，语义化不对，麻烦，不能是百分比</p>
+	<div class="p1 pWidth pHeight gray">
+		<div class="c1 Width Height brown">
+
+		</div>
+	</div>
+</div>
+<div class="pWidth ">
+	<h3>absolute + transform</h3>
+	<p>优点：语义化好一点</p>
+	<p>缺点：父级做了修改，兼容性</p>
+	<div class="p2 pWidth pHeight gray">
+		<div class="c2 Width Height brown">
+
+		</div>
+	</div>
+</div>
+<div class="pWidth ">
+	<h3>flex</h3>
+	<p>优点：简单</p>
+	<p>缺点：兼容性</p>
+	<div class="p3 pWidth pHeight gray">
+		<div class="c3 Width Height brown">
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

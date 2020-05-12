@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		html,body{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.col{
+			width: 200px;
+			margin-right: 50px;
+			display: inline-block;
+		}
+
+		.pWidth{
+			width: 100%;
+		}
+		.pHeight{
+			height: 500px;
+		}
+		.Width{
+			width:200px;
+		}
+		.Height{
+			height: 200px;
+		}
+		.gray{
+			background-color: gray;
+		}
+		.brown{
+			background-color: brown;
+		}
+	</style>
+	<style>
+		.p1{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.c1{
+		}
+	</style>
+	<style>
+		.p2{
+			position: relative;
+		}
+		.c2{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	</style>
+</head>
+<body>
+<h1>垂直居中布局</h1>
+<div class="col">
+	<h3>table-cell + vertical-align</h3>
+	<p>优点：css2 兼容性非常好 </p>
+	<p>缺点：继承vertical-align 需要后续给子元素加vertical-align来消除</p>
+	<div class="p1  gray pWidth pHeight">
+		<div class="c1  brown Width Height">
+
+		</div>
+	</div>
+</div>
+<div class="col">
+	<h3>absolute + transform</h3>
+	<p>优点：父元素脱离文档流不会影响 不会继承</p>
+	<p>缺点：transform css3 兼容性不好</p>
+	<div  class="p2 gray pWidth pHeight">
+		<div  class="c2 brown Width Height"></div>
+	</div>
+</div>
+<div class="col">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		html,body{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.pWidth{
+			width: 100%;
+		}
+		.Width{
+			width:200px;
+		}
+		.Height{
+			height: 200px;
+		}
+		.gray{
+			background-color: gray;
+		}
+		.brown{
+			background-color: brown;
+		}
+	</style>
+	<style>
+		.p1{
+			text-align: center;
+		}
+		.c1{
+			display: inline-block;
+		}
+	</style>
+	<style>
+		.p2{
+
+		}
+		.c2{
+			display: table;
+			margin: 0 auto;
+		}
+	</style>
+	<style>
+		.p3{
+			position: relative;
+		}
+		.c3{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	</style>
+</head>
+<body>
+	<h1>水平居中布局</h1>
+		<div class=" pWidth">
+			<h3>inline-block + text-align</h3>
+			<p>优点：css2 兼容性非常好 </p>
+			<p>缺点：继承text-algin 需要后续给子元素加text-algin来消除</p>
+			<div class="p1 pWidth gray">
+				<div class="c1 Height Width brown"></div>
+			</div>
+		</div>
+		<div class="pWidth">
+			<h3>(table|block) + margin</h3>
+			<p>优点：自需要对子元素设置就可实现，不会继承 </p>
+			<p>缺点：只能是block和table ,  父元素脱离文档里会影响</p>
+			<div class="p2 pWidth gray">
+				<div class="c2 Height Width brown"></div>
+			</div>
+		</div>
+		<div class="pWidth">
+			<h3>absolute + transform</h3>
+			<p>优点：父元素脱离文档流不会影响 </p>
+			<p>缺点：transform css3 兼容性不好</p>
+			<div class="p2 pWidth gray">
+			<div class="p3 pWidth gray Height">
+				<div class="c3 Height Width brown"></div>
+			</div>
+		</div>
+</body>
+</html>
