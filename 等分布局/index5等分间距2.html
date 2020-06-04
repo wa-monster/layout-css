@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二种table属性</title>
+	<style>
+		html,body{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		#parent{
+			display: table;
+			width: calc(100% + 10px);
+			margin-left: -10px;
+		}
+		.inner{
+			padding-left: 10px;
+			display: table-cell;
+			height: 300px;
+		}
+		.child1,.child2,.child3,.child4{
+			height: 300px;
+		}
+		.child1{
+			background-color: blueviolet;
+		}
+		.child2{
+			background-color: blue;
+		}
+		.child3{
+			background-color: darksalmon;
+		}
+		.child4{
+			background-color: brown;
+		}
+	</style>
+</head>
+<body>
+<div id="parent">
+	<div class="inner">
+		<div class="child1"></div>
+	</div>
+	<div class="inner">
+		<div class="child2"></div>
+	</div>
+	<div class="inner">
+		<div class="child3"></div>
+	</div>
+	<div class="inner">
+		<div class="child4"></div>
+	</div>
+
+</div>
+</body>
+</html>

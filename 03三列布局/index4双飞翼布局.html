@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+		#parent{
+			height: 300px;
+		}
+		#left,#right,#center{
+			height: 300px;
+			float: left;
+		}
+		#left{
+			background-color: olivedrab;
+			width: 300px;
+			margin-left: -100%;
+		}
+		#right{
+			background-color: brown;
+			width: 300px;
+			margin-left: -300px;
+		}
+		#center{
+			height: 300px;
+			/*width: calc(100% - 600px);*/
+			width: 100%;
+			background-color: darksalmon;
+			/*margin: 0 400px;*/
+		}
+		#inner{
+			height: 300px;
+			background-color: blueviolet;
+			margin-left: 300px;
+			margin-right: 300px;
+		}
+	</style>
+</head>
+<body>
+<div id="parent">
+	<div id="center">
+		<div id="inner">adwwwwwww</div>
+	</div>
+	<div id="left">awdawdawd</div>
+	<div id="right">awdawdwa</div>
+</div>
+<div>
+	加一个子级元素 <br>
+	去掉position:relative
+</div>
+<script>
+</script>
+</body>
+</html>

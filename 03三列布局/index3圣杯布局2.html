@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+		#parent{
+			height: 300px;
+			margin:0 300px;
+		}
+		#left,#right,#center{
+			height: 300px;
+			float: left;
+		}
+		#left{
+			background-color: olivedrab;
+			width: 300px;
+			margin-left: -100%;
+			position: relative;
+			left: -300px;
+		}
+		#right{
+			background-color: brown;
+			width: 300px;
+			margin-left: -300px;
+			position: relative;
+			right: -300px;
+		}
+		#center{
+			height: 300px;
+			/*width: calc(100% - 600px);*/
+			width: 100%;
+			background-color: darksalmon;
+			/*margin: 0 400px;*/
+		}
+	</style>
+</head>
+<body>
+<div id="parent">
+	<div id="center">awdawdaw</div>
+	<div id="left">awdawdawd</div>
+	<div id="right">awdawdwa</div>
+
+</div>
+<div>
+	加一个父元素 <br>
+	margin-left + position:ralative
+</div>
+<script>
+</script>
+</body>
+</html>
